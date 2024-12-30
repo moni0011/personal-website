@@ -1,0 +1,149 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e7e9eb, #b9d5dd);
+    overflow: hidden;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+header h1 {
+    color: #4682b4;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Main Content */
+main.content {
+    text-align: center;
+    padding: 50px 20px;
+    z-index: 2;
+}
+
+main h2 {
+    color: #4682b4;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Snowflake Button */
+#soundSwitch {
+    background: linear-gradient(135deg, #ffffff, #add8e6);
+    border: none;
+    color: #4682b4;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#soundSwitch:hover {
+    background: linear-gradient(135deg, #add8e6, #ffffff);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+footer p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Snowflakes */
+#snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+/* Snowflake Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Snowflake Styling */
+.snowflake img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Background Overlay */
+#background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+    animation: fade 5s ease-in-out infinite;
+}
+
+/* Fade Animation */
+@keyframes fade {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
